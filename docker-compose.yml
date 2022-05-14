@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  express-app:
+    image: express-app
+    container_name: express-app
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://host.docker.internal:3000/stats"]
+      interval: 3s
+      timeout: 1s
+      retries: 5
+      start_period: 3s
+
+  check-health:
+    image: benjamintdk/ping-pong:1.09
+    command: echo "This is healthy!"
+    depends_on:
+        express-app:
+          condition: service_healthy 

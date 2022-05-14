@@ -1,0 +1,23 @@
+{
+  "name": "experiment",
+  "version": "1.0.0",
+  "description": "experiment",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Benjamintdk/Experiment.git"
+  },
+  "author": "Benjamin Chew",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Benjamintdk/Experiment/issues"
+  },
+  "homepage": "https://github.com/Benjamintdk/Experiment#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
