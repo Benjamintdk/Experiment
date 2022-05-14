@@ -9,7 +9,7 @@ services:
       context: .
       dockerfile: Dockerfile
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://host.docker.internal:3000/stats"]
+      test: ["CMD", "curl", "-f", "http://express-app:3000/stats"]
       interval: 3s
       timeout: 1s
       retries: 5
